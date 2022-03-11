@@ -34,9 +34,6 @@ public class ReplenishmentPage {
         amountField.setValue(String.valueOf(transferInfo.getAmount()));
         fromField.setValue(transferInfo.getNumberCard());
         transferButton.click();
-        if (errorNotification.is(visible)) {
-            cancelButton.click();
-        }
         return new DashboardPage();
     }
 }
