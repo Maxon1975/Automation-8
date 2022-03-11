@@ -9,11 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class TransferMoneyBetweenOwnCardsTest {
 
     @BeforeAll
-    public static void loginToPersonalAccount() {
-        //Вместо первых двух команд можно использовать эту:
-        //var loginPage = open("http://localhost:9999", LoginPage.class);
-        open("http://localhost:9999");
-        var loginPage = new LoginPage();
+    public static void loginToPersonalAccount() 
+        var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getUserAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
         var verificationCode = DataHelper.getVerificationCodeFor();
