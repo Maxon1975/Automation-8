@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TransferMoneyBetweenOwnCardsTest {
 
     @BeforeAll
-    public static void loginToPersonalAccount() 
+    public static void loginToPersonalAccount() { 
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getUserAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
